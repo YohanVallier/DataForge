@@ -1,4 +1,4 @@
-# DataForge
+# DataScienceProfessionalPortfolio
 
 A modular, production-oriented framework for building a **professional Data Science portfolio**. It provides reusable building blocks for data handling, machine learning, ETL pipelines, and visualization, so that individual portfolio projects can focus on the analytical problem rather than on boilerplate.
 
