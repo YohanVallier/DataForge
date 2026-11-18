@@ -1,0 +1,78 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "DataScienceProfessionalPortfolio"
+version = "0.1.0"
+description = "Professional Data Science portfolio framework with modular data handling, modeling, ETL, and visualization components."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Data Science Portfolio Author" },
+]
+keywords = [
+    "data-science",
+    "machine-learning",
+    "etl",
+    "analytics",
+    "portfolio",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+]
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "matplotlib>=3.7",
+    "seaborn>=0.12",
+    "plotly>=5.15",
+    "scikit-learn>=1.3",
+    "xgboost>=2.0",
+    "openpyxl>=3.1",
+    "sqlalchemy>=2.0",
+    "requests>=2.31",
+    "beautifulsoup4>=4.12",
+    "pyarrow>=14.0",
+    "streamlit>=1.30",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+]
+
+[project.scripts]
+data-science-portfolio = "DataScienceProfessionalPortfolio.__main__:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["DataScienceProfessionalPortfolio*"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q --strict-markers"
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.coverage.run]
+source = ["src/DataScienceProfessionalPortfolio"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
