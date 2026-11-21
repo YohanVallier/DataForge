@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to **DataScienceProfessionalPortfolio** are documented in this file.
+All notable changes to **DataForge** are documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -32,7 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `LICENSE` (MIT).
 - `CHANGELOG.md` (this file).
 
-#### Core package — `DataScienceProfessionalPortfolio.core`
+#### Core package — `DataForge.core`
 
 - `data_handling.py`:
   - `load_csv` — load CSV files with configurable separator, encoding, dtypes, and date parsing.
@@ -48,7 +48,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `cross_validate_model` — k-fold cross-validation with mean score summary.
   - `save_model` / `load_model` — persist and restore fitted models via pickle.
 
-#### Services package — `DataScienceProfessionalPortfolio.services`
+#### Services package — `DataForge.services`
 
 - `etl.py`:
   - `extract` — read data from CSV, Parquet, or SQL sources.
@@ -57,7 +57,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `run_etl_pipeline` — orchestrate extract → transform → load with structured results.
   - `ETLResult` — dataclass summarizing pipeline runs (rows extracted/loaded, columns, steps applied).
 
-#### Utils package — `DataScienceProfessionalPortfolio.utils`
+#### Utils package — `DataForge.utils`
 
 - `helpers.py`:
   - `get_logger` — idempotent logger configuration with stream and optional file handlers.
@@ -69,7 +69,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `safe_divide` — division that returns a default on zero denominator.
   - `to_dict_safe` — best-effort conversion of objects to plain dictionaries.
 
-#### Visualization package — `DataScienceProfessionalPortfolio.visualization`
+#### Visualization package — `DataForge.visualization`
 
 - `plots.py`:
   - `plot_distribution` — histogram, KDE, or box plot of a single column.
@@ -84,7 +84,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### Entry point
 
-- `src/DataScienceProfessionalPortfolio/__main__.py` — command-line entry point exposed as the `data-science-portfolio` console script.
+- `src/DataForge/__main__.py` — command-line entry point exposed as the `data-science-portfolio` console script.
 
 #### Testing and CI
 
@@ -108,5 +108,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **MINOR** — backward-compatible functionality additions.
 - **PATCH** — backward-compatible bug fixes.
 
-[Unreleased]: https://github.com/<your-username>/DataScienceProfessionalPortfolio/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/<your-username>/DataScienceProfessionalPortfolio/releases/tag/v0.1.0
+[Unreleased]: https://github.com/<your-username>/DataForge/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/<your-username>/DataForge/releases/tag/v0.1.0

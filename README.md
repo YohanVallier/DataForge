@@ -1,4 +1,4 @@
-# DataScienceProfessionalPortfolio
+# DataForge
 
 A modular, production-oriented framework for building a **professional Data Science portfolio**. It provides reusable building blocks for data handling, machine learning, ETL pipelines, and visualization, so that individual portfolio projects can focus on the analytical problem rather than on boilerplate.
 
@@ -63,7 +63,7 @@ Each portfolio project can import these modules, extend them, and focus on the d
 ├── config/
 │   └── settings.py                 # Centralized configuration
 ├── src/
-│   └── DataScienceProfessionalPortfolio/
+│   └── DataForge/
 │       ├── __init__.py
 │       ├── __main__.py             # CLI entry point
 │       ├── core/
@@ -109,8 +109,8 @@ Each portfolio project can import these modules, extend them, and focus on the d
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/DataScienceProfessionalPortfolio.git
-cd DataScienceProfessionalPortfolio
+git clone https://github.com/<your-username>/DataForge.git
+cd DataForge
 ```
 
 ### 2. Create and activate a virtual environment
@@ -161,12 +161,12 @@ The `.env` file is excluded from version control by `.gitignore`.
 
 ## Usage
 
-The package is importable as `DataScienceProfessionalPortfolio`. The examples below illustrate the intended usage of each module.
+The package is importable as `DataForge`. The examples below illustrate the intended usage of each module.
 
 ### Data Handling
 
 ```python
-from DataScienceProfessionalPortfolio.core.data_handling import load_csv, clean_dataframe
+from DataForge.core.data_handling import load_csv, clean_dataframe
 
 df = load_csv("data/raw/sales.csv")
 df_clean = clean_dataframe(df, drop_duplicates=True)
@@ -175,7 +175,7 @@ df_clean = clean_dataframe(df, drop_duplicates=True)
 ### Machine Learning Modeling
 
 ```python
-from DataScienceProfessionalPortfolio.core.modeling import train_model, evaluate_model
+from DataForge.core.modeling import train_model, evaluate_model
 
 model = train_model(X_train, y_train, model_type="random_forest")
 metrics = evaluate_model(model, X_test, y_test)
@@ -184,7 +184,7 @@ metrics = evaluate_model(model, X_test, y_test)
 ### ETL Pipelines
 
 ```python
-from DataScienceProfessionalPortfolio.services.etl import run_etl_pipeline
+from DataForge.services.etl import run_etl_pipeline
 
 run_etl_pipeline(
     source="data/raw/transactions.csv",
@@ -195,7 +195,7 @@ run_etl_pipeline(
 ### Visualization
 
 ```python
-from DataScienceProfessionalPortfolio.visualization.plots import plot_distribution
+from DataForge.visualization.plots import plot_distribution
 
 fig = plot_distribution(df, column="revenue", kind="hist")
 fig.savefig("reports/revenue_distribution.png")
@@ -212,7 +212,7 @@ data-science-portfolio --help
 Or run it as a module:
 
 ```bash
-python -m DataScienceProfessionalPortfolio --help
+python -m DataForge --help
 ```
 
 ---
@@ -228,7 +228,7 @@ pytest
 Or with explicit coverage reporting:
 
 ```bash
-pytest --cov=src/DataScienceProfessionalPortfolio --cov-report=term-missing
+pytest --cov=src/DataForge --cov-report=term-missing
 ```
 
 Tests are configured in `pyproject.toml` under `[tool.pytest.ini_options]` and use fixtures defined in `tests/conftest.py`.

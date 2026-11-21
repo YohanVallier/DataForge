@@ -3,7 +3,7 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "DataScienceProfessionalPortfolio"
+name = "DataForge"
 version = "0.1.0"
 description = "Professional Data Science portfolio framework with modular data handling, modeling, ETL, and visualization components."
 readme = "README.md"
@@ -54,14 +54,14 @@ dev = [
 ]
 
 [project.scripts]
-data-science-portfolio = "DataScienceProfessionalPortfolio.__main__:main"
+data-science-portfolio = "DataForge.__main__:main"
 
 [tool.setuptools]
 package-dir = { "" = "src" }
 
 [tool.setuptools.packages.find]
 where = ["src"]
-include = ["DataScienceProfessionalPortfolio*"]
+include = ["DataForge*"]
 
 [tool.pytest.ini_options]
 minversion = "7.0"
@@ -70,7 +70,7 @@ testpaths = ["tests"]
 pythonpath = ["src"]
 
 [tool.coverage.run]
-source = ["src/DataScienceProfessionalPortfolio"]
+source = ["src/DataForge"]
 branch = true
 
 [tool.coverage.report]

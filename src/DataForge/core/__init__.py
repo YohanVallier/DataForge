@@ -1,25 +1,25 @@
-"""Core subpackage for DataScienceProfessionalPortfolio.
+"""Core subpackage for DataForge.
 
 This subpackage contains the fundamental building blocks of the framework:
 
-- :mod:`DataScienceProfessionalPortfolio.core.data_handling` — data loading,
+- :mod:`DataForge.core.data_handling` — data loading,
   cleaning, and preprocessing utilities.
-- :mod:`DataScienceProfessionalPortfolio.core.modeling` — machine learning
+- :mod:`DataForge.core.modeling` — machine learning
   model training and evaluation utilities.
 
 The public API is re-exported here for convenience, so that consumers can
 import directly from the subpackage::
 
-    from DataScienceProfessionalPortfolio.core import load_csv, train_model
+    from DataForge.core import load_csv, train_model
 """
 
 from __future__ import annotations
 
-from DataScienceProfessionalPortfolio.core.data_handling import (
+from DataForge.core.data_handling import (
     clean_dataframe,
     load_csv,
 )
-from DataScienceProfessionalPortfolio.core.modeling import (
+from DataForge.core.modeling import (
     evaluate_model,
     train_model,
 )
