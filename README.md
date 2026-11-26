@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 <div align="center">
 
 # DataScienceProfessionalPortfolio
+=======
+# DataForge
+>>>>>>> 49d003c263b8e76bec8dc63b988c9b6e532596c5
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white)](#) [![Pandas](https://img.shields.io/badge/Pandas-Data%20Handling-150458?style=flat-square&logo=pandas&logoColor=white)](#) [![Scikit-learn](https://img.shields.io/badge/Scikit--learn-ML-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)](#) [![XGBoost](https://img.shields.io/badge/XGBoost-Modeling-189FDD?style=flat-square)](#) [![Interface](https://img.shields.io/badge/Interface-Python%20Package%20%26%20CLI-4B5563?style=flat-square)](#)
 
@@ -162,7 +166,7 @@ flowchart LR
 ├── config/
 │   └── settings.py                 # Centralized configuration
 ├── src/
-│   └── DataScienceProfessionalPortfolio/
+│   └── DataForge/
 │       ├── __init__.py
 │       ├── __main__.py             # CLI entry point
 │       ├── core/
@@ -206,8 +210,13 @@ flowchart LR
 #### 1. Clone the repository
 
 ```bash
+<<<<<<< HEAD
 git clone [https://github.com/](https://github.com/)<your-username>/DataScienceProfessionalPortfolio.git
 cd DataScienceProfessionalPortfolio
+=======
+git clone https://github.com/<your-username>/DataForge.git
+cd DataForge
+>>>>>>> 49d003c263b8e76bec8dc63b988c9b6e532596c5
 ```
 
 > **Note:** Replace `<your-username>` with the actual GitHub repository owner's username, as it was left as a placeholder in the original documentation.
@@ -269,12 +278,16 @@ export LOG_LEVEL="INFO"
 
 ### 1.9. Usage
 
+<<<<<<< HEAD
 The package is importable as `DataScienceProfessionalPortfolio` and exposes a CLI console script after installation.
+=======
+The package is importable as `DataForge`. The examples below illustrate the intended usage of each module.
+>>>>>>> 49d003c263b8e76bec8dc63b988c9b6e532596c5
 
 #### Data Handling
 
 ```python
-from DataScienceProfessionalPortfolio.core.data_handling import load_csv, clean_dataframe
+from DataForge.core.data_handling import load_csv, clean_dataframe
 
 df = load_csv("data/raw/sales.csv")
 df_clean = clean_dataframe(df, drop_duplicates=True)
@@ -283,7 +296,7 @@ df_clean = clean_dataframe(df, drop_duplicates=True)
 #### Machine Learning Modeling
 
 ```python
-from DataScienceProfessionalPortfolio.core.modeling import train_model, evaluate_model
+from DataForge.core.modeling import train_model, evaluate_model
 
 model = train_model(X_train, y_train, model_type="random_forest")
 metrics = evaluate_model(model, X_test, y_test)
@@ -292,7 +305,7 @@ metrics = evaluate_model(model, X_test, y_test)
 #### ETL Pipelines
 
 ```python
-from DataScienceProfessionalPortfolio.services.etl import run_etl_pipeline
+from DataForge.services.etl import run_etl_pipeline
 
 run_etl_pipeline(
     source="data/raw/transactions.csv",
@@ -303,7 +316,7 @@ run_etl_pipeline(
 #### Visualization
 
 ```python
-from DataScienceProfessionalPortfolio.visualization.plots import plot_distribution
+from DataForge.visualization.plots import plot_distribution
 
 fig = plot_distribution(df, column="revenue", kind="hist")
 fig.savefig("reports/revenue_distribution.png")
@@ -320,7 +333,7 @@ data-science-portfolio --help
 Or execute directly as a Python module:
 
 ```bash
-python -m DataScienceProfessionalPortfolio --help
+python -m DataForge --help
 ```
 
 #### Documented Data Formats and Interfaces
@@ -370,7 +383,13 @@ flowchart TD
 
 ---
 
+<<<<<<< HEAD
 ### 1.11. Testing
+=======
+```bash
+pytest --cov=src/DataForge --cov-report=term-missing
+```
+>>>>>>> 49d003c263b8e76bec8dc63b988c9b6e532596c5
 
 Automated tests are implemented with `pytest`, configured in `pyproject.toml` under `[tool.pytest.ini_options]`, and supported by shared fixtures in `tests/conftest.py` and unit tests in `tests/test_main.py`.
 
