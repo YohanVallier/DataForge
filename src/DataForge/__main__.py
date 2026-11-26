@@ -1,4 +1,4 @@
-"""Command-line entry point for DataScienceProfessionalPortfolio.
+"""Command-line entry point for DataForge.
 
 This module exposes a small, dependency-light CLI that lets users inspect the
 framework configuration and run a demonstration ETL pipeline. It is intended
@@ -7,7 +7,7 @@ as a smoke-test entry point and as a template for project-specific scripts.
 The CLI is exposed as the ``data-science-portfolio`` console script (see
 ``pyproject.toml``) and can also be invoked as a module::
 
-    python -m DataScienceProfessionalPortfolio --help
+    python -m DataForge --help
 
 Public API
 ----------
@@ -23,9 +23,9 @@ import sys
 from pathlib import Path
 from typing import Sequence
 
-from DataScienceProfessionalPortfolio import __version__
-from DataScienceProfessionalPortfolio.services.etl import run_etl_pipeline
-from DataScienceProfessionalPortfolio.utils.helpers import get_logger
+from DataForge import __version__
+from DataForge.services.etl import run_etl_pipeline
+from DataForge.utils.helpers import get_logger
 
 logger = logging.getLogger(__name__)
 
@@ -46,7 +46,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="data-science-portfolio",
         description=(
-            "DataScienceProfessionalPortfolio command-line interface. "
+            "DataForge command-line interface. "
             "Inspect configuration and run demonstration workflows."
         ),
     )
@@ -112,7 +112,7 @@ def _configure_logging(level: str | None) -> None:
         If ``level`` is not a recognized logging level.
     """
     try:
-        get_logger("DataScienceProfessionalPortfolio", level=level)
+        get_logger("DataForge", level=level)
     except ValueError as exc:
         raise ValueError(f"Invalid log level: {exc}") from exc
 
@@ -133,7 +133,7 @@ def _run_info() -> int:
         logger.error("Failed to load settings: %s", exc)
         return 1
 
-    print(f"DataScienceProfessionalPortfolio {__version__}")
+    print(f"DataForge {__version__}")
     for key, value in settings.as_dict().items():
         print(f"  {key}: {value}")
     return 0

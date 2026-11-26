@@ -27,7 +27,7 @@ from sqlalchemy import create_engine, text
 from sqlalchemy.engine import Engine
 from sqlalchemy.exc import SQLAlchemyError
 
-from DataScienceProfessionalPortfolio.core.data_handling import (
+from DataForge.core.data_handling import (
     clean_dataframe,
     load_csv,
     load_parquet,
@@ -266,7 +266,7 @@ def transform(
     """Apply a configurable transformation pipeline to a DataFrame.
 
     The function first applies the standard cleaning step from
-    :func:`DataScienceProfessionalPortfolio.core.data_handling.clean_dataframe`,
+    :func:`DataForge.core.data_handling.clean_dataframe`,
     then applies any additional custom transformation steps in order.
 
     Parameters

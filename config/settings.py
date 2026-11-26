@@ -1,4 +1,4 @@
-"""Centralized configuration settings for DataScienceProfessionalPortfolio.
+"""Centralized configuration settings for DataForge.
 
 This module provides a single, importable source of truth for configuration
 values used across the framework. All values are read from environment

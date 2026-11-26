@@ -1,4 +1,4 @@
-"""Shared utility functions for DataScienceProfessionalPortfolio.
+"""Shared utility functions for DataForge.
 
 This module provides cross-cutting helpers used across the framework:
 

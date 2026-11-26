@@ -1,4 +1,4 @@
-"""Unit tests for the core functionality of DataScienceProfessionalPortfolio.
+"""Unit tests for the core functionality of DataForge.
 
 This module exercises the public API of the framework's core, services,
 utilities, and visualization modules. Tests are grouped by module and rely on
@@ -6,11 +6,11 @@ the fixtures defined in :mod:`tests.conftest`.
 
 Coverage
 --------
-- :mod:`DataScienceProfessionalPortfolio.core.data_handling`
-- :mod:`DataScienceProfessionalPortfolio.core.modeling`
-- :mod:`DataScienceProfessionalPortfolio.services.etl`
-- :mod:`DataScienceProfessionalPortfolio.utils.helpers`
-- :mod:`DataScienceProfessionalPortfolio.visualization.plots`
+- :mod:`DataForge.core.data_handling`
+- :mod:`DataForge.core.modeling`
+- :mod:`DataForge.services.etl`
+- :mod:`DataForge.utils.helpers`
+- :mod:`DataForge.visualization.plots`
 """
 
 from __future__ import annotations
@@ -27,8 +27,8 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from DataScienceProfessionalPortfolio import __version__
-from DataScienceProfessionalPortfolio.core.data_handling import (
+from DataForge import __version__
+from DataForge.core.data_handling import (
     clean_dataframe,
     load_csv,
     load_parquet,
@@ -36,7 +36,7 @@ from DataScienceProfessionalPortfolio.core.data_handling import (
     split_features_target,
     train_test_split_df,
 )
-from DataScienceProfessionalPortfolio.core.modeling import (
+from DataForge.core.modeling import (
     cross_validate_model,
     evaluate_model,
     load_model,
@@ -44,14 +44,14 @@ from DataScienceProfessionalPortfolio.core.modeling import (
     save_model,
     train_model,
 )
-from DataScienceProfessionalPortfolio.services.etl import (
+from DataForge.services.etl import (
     ETLResult,
     extract,
     load,
     run_etl_pipeline,
     transform,
 )
-from DataScienceProfessionalPortfolio.utils.helpers import (
+from DataForge.utils.helpers import (
     chunked,
     ensure_directory,
     get_logger,
@@ -60,7 +60,7 @@ from DataScienceProfessionalPortfolio.utils.helpers import (
     timer,
     validate_columns,
 )
-from DataScienceProfessionalPortfolio.visualization.plots import (
+from DataForge.visualization.plots import (
     plot_bar,
     plot_correlation_matrix,
     plot_distribution,

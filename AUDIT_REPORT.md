@@ -2,7 +2,7 @@
 
 ## 1. Project Status
 
-O projeto "DataScienceProfessionalPortfolio" está em um estágio inicial de desenvolvimento, com a versão 0.1.0 já implementada. A arquitetura é modular e bem organizada, com foco em manipulação de dados, modelagem de machine learning, pipelines ETL e visualização de dados.
+O projeto "DataForge" está em um estágio inicial de desenvolvimento, com a versão 0.1.0 já implementada. A arquitetura é modular e bem organizada, com foco em manipulação de dados, modelagem de machine learning, pipelines ETL e visualização de dados.
 
 ## 2. Requirements Coverage
 

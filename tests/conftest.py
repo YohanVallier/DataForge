@@ -26,7 +26,7 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from DataScienceProfessionalPortfolio.utils.helpers import get_logger
+from DataForge.utils.helpers import get_logger
 
 
 @pytest.fixture()
